@@ -1,5 +1,5 @@
 // 文件: app/src/python/java/com/github/catvod/crawler/python/PyLoader.java
-package com.github.catvod.crawler;
+package cn.xfywz.catvod.crawler;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -7,10 +7,10 @@ import android.util.Log;
 
 import androidx.core.content.ContextCompat;
 
-import com.github.catvod.crawler.python.IPyLoader;
-import com.github.tvbox.osc.base.App;
-import com.github.tvbox.osc.util.LOG;
-import com.github.tvbox.osc.util.MD5;
+import cn.xfywz.catvod.crawler.python.IPyLoader;
+import cn.xfywz.tv.base.App;
+import cn.xfywz.tv.util.LOG;
+import cn.xfywz.tv.util.MD5;
 import com.undcover.freedom.pyramid.PythonLoader;
 import com.undcover.freedom.pyramid.PythonSpider;
 import java.io.UnsupportedEncodingException;

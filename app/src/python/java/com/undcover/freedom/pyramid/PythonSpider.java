@@ -6,7 +6,7 @@ import android.util.Base64;
 import android.util.Log;
 
 import com.chaquo.python.PyObject;
-import com.github.catvod.crawler.Spider;
+import cn.xfywz.catvod.crawler.Spider;
 
 import org.json.JSONArray;
 import org.json.JSONException;

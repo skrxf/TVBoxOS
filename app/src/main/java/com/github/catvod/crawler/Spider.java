@@ -2,143 +2,92 @@ package com.github.catvod.crawler;
 
 import android.content.Context;
 
-import com.github.tvbox.osc.util.OkGoHelper;
-
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import okhttp3.Dns;
-
-public class Spider {
+/**
+ * Bridge class to maintain compatibility with external JAR files
+ * that expect Spider to be in com.github.catvod.crawler package.
+ * This class extends the actual Spider implementation.
+ */
+public class Spider extends cn.xfywz.catvod.crawler.Spider {
 
     public static JSONObject empty = new JSONObject();
 
-    protected static Context mContext;
+    public Spider() {
+        super();
+    }
 
+    @Override
     public void init(Context context) {
-        mContext = context;
+        super.init(context);
     }
 
+    @Override
     public void init(Context context, String extend) {
-        init(context);
+        super.init(context, extend);
     }
 
-    /**
-     * 首页数据内容
-     *
-     * @param filter 是否开启筛选
-     * @return
-     */
+    @Override
     public String homeContent(boolean filter) {
-        return "";
+        return super.homeContent(filter);
     }
 
-    /**
-     * 首页最近更新数据 如果上面的homeContent中不包含首页最近更新视频的数据 可以使用这个接口返回
-     *
-     * @return
-     */
+    @Override
     public String homeVideoContent() {
-        return "";
+        return super.homeVideoContent();
     }
 
-    /**
-     * 分类数据
-     *
-     * @param tid
-     * @param pg
-     * @param filter
-     * @param extend
-     * @return
-     */
+    @Override
     public String categoryContent(String tid, String pg, boolean filter, HashMap<String, String> extend) {
-        return "";
+        return super.categoryContent(tid, pg, filter, extend);
     }
 
-    /**
-     * 详情数据
-     *
-     * @param ids
-     * @return
-     */
+    @Override
     public String detailContent(List<String> ids) {
-        return "";
+        return super.detailContent(ids);
     }
 
-    /**
-     * 搜索数据内容
-     *
-     * @param key
-     * @param quick
-     * @return
-     */
+    @Override
     public String searchContent(String key, boolean quick) {
-        return "";
+        return super.searchContent(key, quick);
     }
 
-    /**
-     * 播放信息
-     *
-     * @param flag
-     * @param id
-     * @return
-     */
+    @Override
     public String playerContent(String flag, String id, List<String> vipFlags) {
-        return "";
+        return super.playerContent(flag, id, vipFlags);
     }
 
-    /**
-     * webview解析时使用 可自定义判断当前加载的 url 是否是视频
-     *
-     * @param url
-     * @return
-     */
+    @Override
     public boolean isVideoFormat(String url) {
-        return false;
+        return super.isVideoFormat(url);
     }
 
-    /**
-     * 是否手动检测webview中加载的url
-     *
-     * @return
-     */
+    @Override
     public boolean manualVideoCheck() {
-        return false;
+        return super.manualVideoCheck();
     }
 
-    /**
-     * 直播list
-     * @return
-     */
+    @Override
     public String liveContent(String url) {
-        return "";
+        return super.liveContent(url);
     }
 
-    public static Dns safeDns() {
-        return OkGoHelper.dnsOverHttps;
-    }
-
-    /**
-     * 取消请求tag
-     */
+    @Override
     public void cancelByTag() {
-
+        super.cancelByTag();
     }
 
-    /**
-     * 销毁
-     */
-    public void destroy() {}
+    @Override
+    public void destroy() {
+        super.destroy();
+    }
 
-    /**
-     * 爬虫代理
-     * @param params
-     * @return
-     */
-    public Object[] proxyLocal(Map< String, String > params) {
-        return null;
+    @Override
+    public Object[] proxyLocal(Map<String, String> params) {
+        return super.proxyLocal(params);
     }
 }

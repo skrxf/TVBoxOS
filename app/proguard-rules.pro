@@ -190,15 +190,17 @@
 -dontwarn com.google.android.exoplayer2.**
 
 # 实体类
-#-keep class com.github.tvbox.osc.bean.** { *; }
+#-keep class cn.xfywz.tv.bean.** { *; }
 #CardView
--keep class com.github.tvbox.osc.ui.tv.widget.card.**{*;}
+-keep class cn.xfywz.tv.ui.tv.widget.card.**{*;}
 #ViewObj
--keep class com.github.tvbox.osc.ui.tv.widget.ViewObj{
+-keep class cn.xfywz.tv.ui.tv.widget.ViewObj{
     <methods>;
 }
 
--keep class com.github.catvod.crawler.*{*;}
+-keep class cn.xfywz.catvod.crawler.*{*;}
+# Keep bridge classes for external JAR compatibility
+-keep class com.github.catvod.crawler.**{*;}
 # 迅雷下载模块
 -keep class com.xunlei.downloadlib.** {*;}
 # quickjs引擎

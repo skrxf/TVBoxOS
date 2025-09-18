@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.tvbox.osc">
+    package="cn.xfywz.tv">
 
     <uses-feature
         android:name="android.software.leanback"
@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
-        android:name=".base.App"
+        android:name="cn.xfywz.tv.base.App"
         android:allowBackup="true"
         android:banner="@drawable/app_banner"
         android:configChanges="orientation|keyboardHidden|screenSize"
@@ -33,7 +33,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".ui.activity.HomeActivity"
+            android:name="cn.xfywz.tv.ui.activity.HomeActivity"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,42 +44,42 @@
         </activity>
 
         <activity
-            android:name=".ui.activity.LivePlayActivity"
+            android:name="cn.xfywz.tv.ui.activity.LivePlayActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.DetailActivity"
+            android:name="cn.xfywz.tv.ui.activity.DetailActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.PlayActivity"
+            android:name="cn.xfywz.tv.ui.activity.PlayActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.PushActivity"
+            android:name="cn.xfywz.tv.ui.activity.PushActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.SearchActivity"
+            android:name="cn.xfywz.tv.ui.activity.SearchActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.FastSearchActivity"
+            android:name="cn.xfywz.tv.ui.activity.FastSearchActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.SettingActivity"
+            android:name="cn.xfywz.tv.ui.activity.SettingActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.HistoryActivity"
+            android:name="cn.xfywz.tv.ui.activity.HistoryActivity"
             android:screenOrientation="sensorLandscape" />
         <activity
-            android:name=".ui.activity.CollectActivity"
+            android:name="cn.xfywz.tv.ui.activity.CollectActivity"
             android:screenOrientation="sensorLandscape" />
 
-        <receiver android:name=".receiver.SearchReceiver">
+        <receiver android:name="cn.xfywz.tv.receiver.SearchReceiver">
             <intent-filter>
                 <action android:name="android.content.movie.search.Action" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.CustomWebReceiver">
+        <receiver android:name="cn.xfywz.tv.receiver.CustomWebReceiver">
             <intent-filter>
                 <action android:name="android.content.movie.custom.web.Action" />
             </intent-filter>

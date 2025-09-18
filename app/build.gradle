@@ -4,7 +4,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId 'com.github.tvbox.osc'
+        applicationId 'cn.xfywz.tv'
         targetSdkVersion 28
         versionCode 1
         versionName '1.0.0'

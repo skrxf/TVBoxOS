@@ -7,12 +7,12 @@ import android.util.Base64;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
-import com.github.catvod.crawler.Spider;
-import com.github.catvod.crawler.SpiderNull;
+import cn.xfywz.catvod.crawler.Spider;
+import cn.xfywz.catvod.crawler.SpiderNull;
 
-import com.github.tvbox.osc.util.OkGoHelper;
-import com.github.tvbox.osc.util.urlhttp.OKCallBack;
-import com.github.tvbox.osc.util.urlhttp.OkHttpUtil;
+import cn.xfywz.tv.util.OkGoHelper;
+import cn.xfywz.tv.util.urlhttp.OKCallBack;
+import cn.xfywz.tv.util.urlhttp.OkHttpUtil;
 
 
 import org.json.JSONArray;
